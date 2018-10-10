@@ -2,12 +2,12 @@ const nthPrime = function(desiredCount) {
   let count = 3;
   let number = 5;
   let desiredPrime = 0;
-  let halfNumber = 0;
+  let sqrtOfNum = 0;
   if(desiredCount >= 1) {
     while(count <= desiredCount) {
       let factor = 2;
-      halfNumber = Math.ceil(number/2);
-      while(factor < halfNumber) {
+      sqrtOfNumber = Math.ceil(Math.sqrt(number));
+      while(factor <= sqrtOfNumber) {
         if(number%factor == 0) {
           factor = number;
         }
